@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayport West — Unit Availability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <img src="assets/hero.png" alt="Bayport West Waterfront Complex" class="hero-img">
+        <div class="hero-overlay"></div>
+
+        <!-- SVG overlay with building contour polygons -->
+        <svg class="hero-svg" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- Tower A (far left in image) -->
+            <a href="building.html?id=0" class="building-hotspot">
+                <polygon points="41,459 397,339 465,385 488,755 164,898 93,793" />
+                <text x="280" y="600" class="hotspot-text">Tower A</text>
+            </a>
+
+            <!-- Tower B (center-left) -->
+            <a href="building.html?id=1" class="building-hotspot">
+                <polygon points="477,251 728,180 804,219 801,594 576,710 500,688" />
+                <text x="650" y="440" class="hotspot-text">Tower B</text>
+            </a>
+
+            <!-- Tower C (center-right) -->
+            <a href="building.html?id=2" class="building-hotspot">
+                <polygon points="826,140 1026,89 1103,116 1081,454 904,544 818,502" />
+                <text x="960" y="330" class="hotspot-text">Tower C</text>
+            </a>
+
+            <!-- Tower D (far right) -->
+            <a href="building.html?id=3" class="building-hotspot">
+                <polygon points="1165,131 1231,106 1493,156 1436,550 1376,606 1134,502" />
+                <text x="1310" y="370" class="hotspot-text">Tower D</text>
+            </a>
+        </svg>
+
+        <div class="hero-title">
+            <h1>BAYPORT WEST</h1>
+            <p>Click a building to view unit availability</p>
+        </div>
+    </section>
+
+    <!-- Admin link (subtle, bottom-right) -->
+    <a href="admin.html" class="admin-link" title="Admin">&#9881; Admin</a>
+
+    <!-- Building Cards Section -->
+    <section class="section">
+        <h2 class="section-title">Buildings Overview</h2>
+        <div class="buildings-grid" id="buildings-grid">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

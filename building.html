@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor View — Bayport West</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <a href="index.html" class="back-btn">&larr; Back</a>
+        <h1 id="building-name">Loading...</h1>
+    </header>
+
+    <section class="section">
+        <div class="building-view-layout">
+            <!-- Left: Visual building diagram -->
+            <div class="building-diagram" id="building-diagram">
+                <!-- Rendered by JS: rooftop + stacked floors -->
+            </div>
+
+            <!-- Right: Summary legend -->
+            <div class="building-sidebar">
+                <div class="building-summary">
+                    <h2>Building Summary</h2>
+                    <div class="legend" id="building-legend"></div>
+                    <div id="db-status" style="margin-top:8px;font-size:0.78rem;opacity:0.7"></div>
+                </div>
+                <div class="status-key">
+                    <h2>Status Key</h2>
+                    <div class="key-item"><span class="key-box available"></span> Available</div>
+                    <div class="key-item"><span class="key-box taken"></span> Taken</div>
+                    <div class="key-item"><span class="key-box reserved"></span> Reserved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unit Detail Modal -->
+    <div id="unit-modal" class="unit-modal-overlay" onclick="if(event.target===this) closeUnitModal()">
+        <div class="unit-modal-card">
+            <button class="unit-modal-close" onclick="closeUnitModal()" aria-label="Close">&times;</button>
+            <div id="unit-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Lightbox -->
+    <div id="lightbox" class="lightbox-overlay" onclick="if(event.target===this) closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+        <div id="lightbox-body"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js?v=3"></script>
+    <script src="app.js?v=4"></script>
+</body>
+
+</html>

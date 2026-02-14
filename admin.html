@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Bayport West</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <a href="index.html" class="back-btn">&larr; Back</a>
+        <h1>Admin Panel</h1>
+        <button id="admin-logout-btn" class="admin-header-logout" onclick="adminLogout()" style="display:none">Logout</button>
+    </header>
+
+    <!-- Login form -->
+    <section class="section" id="admin-login">
+        <div class="admin-login-card">
+            <h2>Admin Login</h2>
+            <p class="admin-login-sub">Sign in with your administrator account.</p>
+            <div class="umd-form-group">
+                <label class="umd-field-label">Email</label>
+                <input type="email" id="admin-email" class="umd-input" placeholder="admin@bayportwest.com"
+                       onkeydown="if(event.key==='Enter') document.getElementById('admin-pw').focus()">
+            </div>
+            <div class="umd-form-group">
+                <label class="umd-field-label">Password</label>
+                <input type="password" id="admin-pw" class="umd-input" placeholder="Password"
+                       onkeydown="if(event.key==='Enter') adminLogin()">
+            </div>
+            <div class="umd-form-error" id="admin-login-error"></div>
+            <button id="admin-login-btn" class="umd-submit-btn" onclick="adminLogin()">Login</button>
+        </div>
+    </section>
+
+    <!-- Dashboard (shown after login) -->
+    <section class="section" id="admin-dashboard" style="display:none">
+
+        <!-- Add Tenant -->
+        <div class="admin-card">
+            <h2>Register a Tenant</h2>
+            <p class="admin-card-sub">Link a mobile number to a unit. The tenant will use this number to log in.</p>
+            <div class="admin-add-row">
+                <div class="umd-form-group" style="flex:1">
+                    <label class="umd-field-label">Mobile Number</label>
+                    <input type="tel" id="add-mobile" class="umd-input" placeholder="e.g. 501-555-1001">
+                </div>
+                <div class="umd-form-group" style="flex:2">
+                    <label class="umd-field-label">Unit</label>
+                    <select id="add-unit-select" class="umd-input umd-select">
+                        <option value="">Select a unit…</option>
+                    </select>
+                </div>
+                <button id="add-tenant-btn" class="umd-save-btn admin-add-btn" onclick="addTenant()">Add</button>
+            </div>
+            <div class="umd-form-error" id="add-error"></div>
+            <div class="admin-success" id="add-success"></div>
+        </div>
+
+        <!-- Tenant List -->
+        <div class="admin-card">
+            <h2>Registered Tenants</h2>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Mobile</th>
+                            <th>Unit</th>
+                            <th>Registered</th>
+                            <th>Account</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tenants-tbody">
+                        <tr><td colspan="5" class="admin-empty">Loading…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
