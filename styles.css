@@ -364,23 +364,24 @@ a {
 
 /* Floor availability summary strip (left of each floor) */
 .bldg-floor-avail {
-    width: 62px;
+    width: 90px;
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 4px;
     padding: 4px 6px;
     background: rgba(0, 0, 0, 0.28);
     border-right: 1px solid #2C3440;
 }
 
 .fav {
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 .fav.available {
@@ -736,12 +737,12 @@ a {
     }
 
     .bldg-floor-avail {
-        width: 50px;
+        width: 70px;
         padding: 3px 4px;
     }
 
     .fav {
-        font-size: 0.55rem;
+        font-size: 0.6rem;
     }
 
     .bldg-unit {
