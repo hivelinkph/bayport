@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #1a1a2e;
+    font-family: 'Roboto', 'Georgia', sans-serif;
+    background: #363F4D;
     color: #e0e0e0;
     min-height: 100vh;
 }
@@ -34,7 +34,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(54, 63, 77, 0.8) 100%);
 }
 
 .hero-title {
@@ -47,16 +47,18 @@ a {
 }
 
 .hero-title h1 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #fff;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero-title p {
     font-size: 1.1rem;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.85);
     margin-top: 8px;
 }
 
@@ -80,8 +82,8 @@ a {
 }
 
 .building-hotspot:hover polygon {
-    fill: rgba(255, 255, 255, 0.15);
-    stroke: rgba(255, 255, 255, 0.8);
+    fill: rgba(45, 209, 172, 0.2);
+    stroke: #2DD1AC;
     stroke-width: 4;
     filter: url(#glow);
     transform: scale(1.05);
@@ -91,6 +93,7 @@ a {
     fill: white;
     font-size: 32px;
     font-weight: 700;
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     text-anchor: middle;
     dominant-baseline: middle;
     opacity: 0;
@@ -112,8 +115,9 @@ a {
 }
 
 .section-title {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 30px;
     color: #fff;
     text-align: center;
@@ -127,21 +131,22 @@ a {
 }
 
 .building-card {
-    background: #16213e;
-    border-radius: 12px;
+    background: #2C3440;
+    border-radius: 20px;
     padding: 28px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #2a2a5a;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
 }
 
 .building-card:hover {
-    transform: translateY(-4px);
-    border-color: #4a4a8a;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    border-color: #2DD1AC;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
 }
 
 .building-card h3 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.4rem;
     margin-bottom: 6px;
     color: #fff;
@@ -149,7 +154,7 @@ a {
 
 .building-card .building-subtitle {
     font-size: 0.9rem;
-    color: #888;
+    color: #5F6B7A;
     margin-bottom: 20px;
 }
 
@@ -175,7 +180,7 @@ a {
 }
 
 .legend-dot.available {
-    background: #4CAF50;
+    background: #2DD1AC;
 }
 
 .legend-dot.taken {
@@ -193,50 +198,56 @@ a {
 
 /* Building Page Header */
 .page-header {
-    background: #16213e;
+    background: #2C3440;
     padding: 20px 30px;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: 1px solid #2a2a5a;
+    border-bottom: 1px solid rgba(45, 209, 172, 0.15);
 }
 
 .back-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #2a2a5a;
+    background: #2DD1AC;
     color: #fff;
     padding: 8px 16px;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
     border: none;
-    transition: background 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .back-btn:hover {
-    background: #3a3a7a;
+    background: #24b896;
+    transform: translateY(-1px);
 }
 
 .page-header h1 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.6rem;
     color: #fff;
 }
 
 /* Building Summary Legend */
 .building-summary {
-    background: #16213e;
-    border-radius: 12px;
+    background: #2C3440;
+    border-radius: 20px;
     padding: 20px 28px;
     margin-bottom: 30px;
-    border: 1px solid #2a2a5a;
+    border: 2px solid transparent;
 }
 
 .building-summary h2 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 12px;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Building View Layout */
@@ -259,16 +270,17 @@ a {
 }
 
 .status-key {
-    background: #16213e;
-    border-radius: 12px;
+    background: #2C3440;
+    border-radius: 20px;
     padding: 20px 28px;
-    border: 1px solid #2a2a5a;
+    border: 2px solid transparent;
 }
 
 .status-key h2 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 14px;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .key-item {
@@ -287,7 +299,7 @@ a {
 }
 
 .key-box.available {
-    background: #4CAF50;
+    background: #2DD1AC;
 }
 
 .key-box.taken {
@@ -300,28 +312,29 @@ a {
 
 /* Building Diagram */
 .bldg-rooftop {
-    background: linear-gradient(135deg, #37474f, #546e7a);
+    background: linear-gradient(135deg, #363F4D, #2DD1AC);
     color: #fff;
     text-align: center;
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
     padding: 14px 20px;
     border-radius: 8px 8px 0 0;
-    border: 2px solid #607d8b;
+    border: 2px solid rgba(45, 209, 172, 0.3);
     border-bottom: none;
 }
 
 .bldg-floor {
     display: flex;
     align-items: stretch;
-    border-left: 2px solid #455a64;
-    border-right: 2px solid #455a64;
+    border-left: 2px solid #4a5568;
+    border-right: 2px solid #4a5568;
     transition: background 0.2s;
 }
 
 .bldg-floor:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(45, 209, 172, 0.04);
 }
 
 .bldg-floor:nth-child(even) {
@@ -336,9 +349,9 @@ a {
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 700;
-    color: #90a4ae;
+    color: #5F6B7A;
     background: rgba(0, 0, 0, 0.2);
-    border-right: 1px solid #37474f;
+    border-right: 1px solid #4a5568;
     padding: 4px 0;
 }
 
@@ -360,7 +373,7 @@ a {
     gap: 2px;
     padding: 4px 6px;
     background: rgba(0, 0, 0, 0.28);
-    border-right: 1px solid #263238;
+    border-right: 1px solid #2C3440;
 }
 
 .fav {
@@ -371,7 +384,7 @@ a {
 }
 
 .fav.available {
-    color: #66BB6A;
+    color: #2DD1AC;
 }
 
 .fav.taken {
@@ -402,7 +415,7 @@ a {
 }
 
 .bldg-unit.available {
-    background: #4CAF50;
+    background: #2DD1AC;
 }
 
 .bldg-unit.taken {
@@ -414,15 +427,15 @@ a {
 }
 
 .bldg-ground {
-    background: linear-gradient(135deg, #4e342e, #6d4c41);
-    color: #bcaaa4;
+    background: linear-gradient(135deg, #2C3440, #363F4D);
+    color: #5F6B7A;
     text-align: center;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
     padding: 12px 20px;
     border-radius: 0 0 8px 8px;
-    border: 2px solid #5d4037;
+    border: 2px solid #4a5568;
     border-top: none;
 }
 
@@ -433,7 +446,7 @@ a {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.72);
+    background: rgba(54, 63, 77, 0.72);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -446,25 +459,25 @@ a {
 }
 
 .unit-modal-card {
-    background: #16213e;
-    border: 1px solid #2a2a5a;
-    border-radius: 14px;
+    background: #2C3440;
+    border: 1px solid rgba(45, 209, 172, 0.15);
+    border-radius: 20px;
     width: 100%;
     max-width: 720px;
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
     padding: 32px 28px 28px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .unit-modal-close {
     position: absolute;
     top: 16px;
     right: 18px;
-    background: #2a2a5a;
+    background: rgba(45, 209, 172, 0.15);
     border: none;
-    color: #ccc;
+    color: #2DD1AC;
     font-size: 1.4rem;
     line-height: 1;
     width: 32px;
@@ -478,7 +491,7 @@ a {
 }
 
 .unit-modal-close:hover {
-    background: #3a3a7a;
+    background: rgba(45, 209, 172, 0.3);
     color: #fff;
 }
 
@@ -487,6 +500,7 @@ a {
 }
 
 .umd-unit-num {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
     color: #fff;
@@ -504,8 +518,8 @@ a {
 }
 
 .umd-badge.available {
-    background: #1b5e20;
-    color: #a5d6a7;
+    background: rgba(45, 209, 172, 0.2);
+    color: #2DD1AC;
 }
 
 .umd-badge.taken {
@@ -520,10 +534,10 @@ a {
 
 .umd-details {
     background: rgba(255, 255, 255, 0.04);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 14px 16px;
     margin-bottom: 22px;
-    border: 1px solid #2a2a5a;
+    border: 1px solid rgba(45, 209, 172, 0.1);
 }
 
 .umd-row {
@@ -546,7 +560,7 @@ a {
 
 .umd-label {
     font-size: 0.82rem;
-    color: #7986a8;
+    color: #5F6B7A;
     flex-shrink: 0;
     text-transform: uppercase;
     letter-spacing: 0.4px;
@@ -561,13 +575,14 @@ a {
 .umd-price {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #81c784;
+    color: #2DD1AC;
 }
 
 .umd-section-title {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
-    color: #7986a8;
+    color: #5F6B7A;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     margin-bottom: 10px;
@@ -587,10 +602,10 @@ a {
     width: auto;
     min-width: 220px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
     flex-shrink: 0;
     scroll-snap-align: start;
-    border: 1px solid #2a2a5a;
+    border: 1px solid rgba(45, 209, 172, 0.1);
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -606,8 +621,8 @@ a {
 
 .umd-video video {
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid #2a2a5a;
+    border-radius: 12px;
+    border: 1px solid rgba(45, 209, 172, 0.1);
     cursor: pointer;
 }
 
@@ -618,7 +633,7 @@ a {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.92);
+    background: rgba(54, 63, 77, 0.92);
     z-index: 2000;
     align-items: center;
     justify-content: center;
@@ -645,8 +660,8 @@ a {
     top: 20px;
     right: 24px;
     z-index: 2001;
-    background: rgba(220, 38, 38, 0.85);
-    border: 2px solid #ef4444;
+    background: rgba(244, 67, 54, 0.85);
+    border: 2px solid #F44336;
     color: #fff;
     font-size: 1.6rem;
     font-weight: 700;
@@ -659,11 +674,11 @@ a {
     align-items: center;
     justify-content: center;
     transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
+    box-shadow: 0 4px 20px rgba(244, 67, 54, 0.5);
 }
 
 .lightbox-close:hover {
-    background: #dc2626;
+    background: #F44336;
     transform: scale(1.1);
 }
 
@@ -762,7 +777,7 @@ a {
 .umd-back-btn {
     background: none;
     border: none;
-    color: #7986a8;
+    color: #5F6B7A;
     font-size: 0.85rem;
     cursor: pointer;
     padding: 0 0 14px 0;
@@ -775,6 +790,7 @@ a {
 }
 
 .umd-form-title {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
@@ -783,7 +799,7 @@ a {
 
 .umd-form-sub {
     font-size: 0.88rem;
-    color: #7986a8;
+    color: #5F6B7A;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -796,7 +812,7 @@ a {
     display: block;
     font-size: 0.78rem;
     font-weight: 600;
-    color: #7986a8;
+    color: #5F6B7A;
     text-transform: uppercase;
     letter-spacing: 0.4px;
     margin-bottom: 6px;
@@ -812,7 +828,7 @@ a {
 .umd-input {
     width: 100%;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid #2a2a5a;
+    border: 1px solid rgba(45, 209, 172, 0.15);
     border-radius: 7px;
     color: #e0e0e0;
     font-size: 0.95rem;
@@ -824,24 +840,24 @@ a {
 }
 
 .umd-input:focus {
-    border-color: #5c6bc0;
+    border-color: #2DD1AC;
 }
 
 .umd-input::placeholder {
-    color: #4a5568;
+    color: #5F6B7A;
 }
 
 .umd-select {
     appearance: none;
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237986a8' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235F6B7A' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 34px;
 }
 
 .umd-select option {
-    background: #16213e;
+    background: #2C3440;
 }
 
 .umd-form-error {
@@ -854,20 +870,23 @@ a {
 .umd-submit-btn {
     width: 100%;
     padding: 11px;
-    background: #3949ab;
+    background: #2DD1AC;
     color: #fff;
     border: none;
-    border-radius: 7px;
+    border-radius: 4px;
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
-    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-top: 4px;
 }
 
 .umd-submit-btn:hover:not(:disabled) {
-    background: #5c6bc0;
+    background: #24b896;
+    transform: translateY(-1px);
 }
 
 .umd-submit-btn:disabled {
@@ -880,9 +899,9 @@ a {
     width: 100%;
     margin-top: 18px;
     padding: 10px;
-    background: rgba(57, 73, 171, 0.25);
-    color: #90caf9;
-    border: 1px solid #3949ab;
+    background: rgba(45, 209, 172, 0.15);
+    color: #2DD1AC;
+    border: 1px solid rgba(45, 209, 172, 0.3);
     border-radius: 7px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -892,7 +911,7 @@ a {
 }
 
 .umd-edit-btn:hover {
-    background: rgba(57, 73, 171, 0.45);
+    background: rgba(45, 209, 172, 0.3);
 }
 
 .umd-edit-header {
@@ -904,8 +923,8 @@ a {
 
 .umd-logout-btn {
     background: rgba(255, 255, 255, 0.07);
-    border: 1px solid #2a2a5a;
-    color: #7986a8;
+    border: 1px solid rgba(45, 209, 172, 0.15);
+    color: #5F6B7A;
     font-size: 0.8rem;
     padding: 5px 12px;
     border-radius: 5px;
@@ -934,7 +953,7 @@ a {
     object-fit: cover;
     border-radius: 4px;
     flex-shrink: 0;
-    border: 1px solid #2a2a5a;
+    border: 1px solid rgba(45, 209, 172, 0.1);
 }
 
 .umd-remove-photo {
@@ -965,7 +984,7 @@ a {
     margin-bottom: 8px;
     padding: 6px 10px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #2a2a5a;
+    border: 1px solid rgba(45, 209, 172, 0.1);
     border-radius: 7px;
 }
 
@@ -975,14 +994,14 @@ a {
     object-fit: cover;
     border-radius: 4px;
     flex-shrink: 0;
-    border: 1px solid #2a2a5a;
-    background: #0d1117;
+    border: 1px solid rgba(45, 209, 172, 0.1);
+    background: #1a2028;
 }
 
 .umd-video-name {
     flex: 1;
     font-size: 0.82rem;
-    color: #90caf9;
+    color: #2DD1AC;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -996,16 +1015,16 @@ a {
     margin-top: 8px;
     padding: 8px 14px;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px dashed #3949ab;
+    border: 1px dashed #2DD1AC;
     border-radius: 7px;
-    color: #90caf9;
+    color: #2DD1AC;
     font-size: 0.88rem;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 .umd-upload-label:hover {
-    background: rgba(57, 73, 171, 0.2);
+    background: rgba(45, 209, 172, 0.15);
 }
 
 .umd-upload-icon {
@@ -1014,7 +1033,7 @@ a {
 
 .umd-upload-progress {
     font-size: 0.82rem;
-    color: #81c784;
+    color: #2DD1AC;
     margin-top: 6px;
     min-height: 18px;
 }
@@ -1030,8 +1049,8 @@ a {
     flex: 1;
     padding: 10px;
     background: rgba(255, 255, 255, 0.06);
-    color: #7986a8;
-    border: 1px solid #2a2a5a;
+    color: #5F6B7A;
+    border: 1px solid rgba(45, 209, 172, 0.15);
     border-radius: 7px;
     font-size: 0.9rem;
     cursor: pointer;
@@ -1047,19 +1066,22 @@ a {
 .umd-save-btn {
     flex: 2;
     padding: 10px;
-    background: #2e7d32;
+    background: #2DD1AC;
     color: #fff;
     border: none;
-    border-radius: 7px;
+    border-radius: 4px;
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
-    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .umd-save-btn:hover:not(:disabled) {
-    background: #43a047;
+    background: #24b896;
+    transform: translateY(-1px);
 }
 
 .umd-save-btn:disabled {
@@ -1074,9 +1096,9 @@ a {
     position: fixed;
     bottom: 18px;
     right: 22px;
-    background: rgba(22, 33, 62, 0.9);
-    border: 1px solid #2a2a5a;
-    color: #4a5568;
+    background: rgba(44, 52, 64, 0.9);
+    border: 1px solid rgba(45, 209, 172, 0.15);
+    color: #5F6B7A;
     font-size: 0.78rem;
     padding: 6px 12px;
     border-radius: 20px;
@@ -1086,8 +1108,8 @@ a {
 }
 
 .admin-link:hover {
-    color: #7986a8;
-    border-color: #3949ab;
+    color: #2DD1AC;
+    border-color: #2DD1AC;
 }
 
 .admin-header-logout {
@@ -1096,7 +1118,7 @@ a {
     border: 1px solid #ef5350;
     color: #ef9a9a;
     padding: 7px 16px;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 0.85rem;
     cursor: pointer;
     transition: background 0.2s;
@@ -1112,13 +1134,14 @@ a {
 .admin-login-card {
     max-width: 420px;
     margin: 0 auto;
-    background: #16213e;
-    border: 1px solid #2a2a5a;
-    border-radius: 14px;
+    background: #2C3440;
+    border: 1px solid rgba(45, 209, 172, 0.15);
+    border-radius: 20px;
     padding: 36px 32px;
 }
 
 .admin-login-card h2 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.4rem;
     color: #fff;
     margin-bottom: 8px;
@@ -1126,19 +1149,20 @@ a {
 
 .admin-login-sub {
     font-size: 0.88rem;
-    color: #7986a8;
+    color: #5F6B7A;
     margin-bottom: 24px;
 }
 
 .admin-card {
-    background: #16213e;
-    border: 1px solid #2a2a5a;
-    border-radius: 12px;
+    background: #2C3440;
+    border: 2px solid transparent;
+    border-radius: 20px;
     padding: 26px 28px;
     margin-bottom: 28px;
 }
 
 .admin-card h2 {
+    font-family: 'Graphik', 'Raleway', 'Arial', sans-serif;
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 6px;
@@ -1146,7 +1170,7 @@ a {
 
 .admin-card-sub {
     font-size: 0.85rem;
-    color: #7986a8;
+    color: #5F6B7A;
     margin-bottom: 20px;
 }
 
@@ -1166,7 +1190,7 @@ a {
 }
 
 .admin-success {
-    color: #81c784;
+    color: #2DD1AC;
     font-size: 0.85rem;
     margin-top: 6px;
     min-height: 18px;
@@ -1187,9 +1211,9 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #7986a8;
+    color: #5F6B7A;
     padding: 0 12px 12px 0;
-    border-bottom: 1px solid #2a2a5a;
+    border-bottom: 1px solid rgba(45, 209, 172, 0.15);
 }
 
 .admin-table td {
@@ -1205,7 +1229,7 @@ a {
 
 .admin-empty {
     text-align: center;
-    color: #4a5568;
+    color: #5F6B7A;
     padding: 24px 0 !important;
 }
 
@@ -1218,8 +1242,8 @@ a {
 }
 
 .admin-badge.active {
-    background: #1b5e20;
-    color: #a5d6a7;
+    background: rgba(45, 209, 172, 0.2);
+    color: #2DD1AC;
 }
 
 .admin-badge.pending {
