@@ -86,7 +86,8 @@ async function adminLogin() {
     const { data, error } = await db.auth.signInWithPassword({ email, password: pw });
 
     if (error || !data.user) {
-        err.textContent = 'Invalid credentials.';
+        err.textContent = error ? error.message : 'No user returned.';
+        console.error('Login error:', error);
         btn.disabled = false; btn.textContent = 'Login';
         return;
     }
